@@ -59,3 +59,20 @@ ORDER BY ertekeles DESC;
 
 -- 11. feladat
 -- Listázd ki a színészeket születési dátum szerint növekvő sorrendben!
+SELECT * FROM szineszek
+ORDER BY szuletesi_datum ASC;
+
+
+-- 12. feladat
+-- Keresd meg azokat a filmeket, amelyek 2010 és 2020 között jelentek meg ÉS értékelésük 7.5 felett van!
+SELECT * FROM filmek
+WHERE megjelenesi_ev BETWEEN 2010 AND 2020 AND ertekeles > 7.5;
+-- 13. feladat
+-- Mutasd meg azokat a filmeket, amelyek hossza 120 és 160 perc között van!
+SELECT * FROM filmek
+WHERE hossz BETWEEN 120 AND 160;
+
+-- 14. feladat
+-- Listázd ki azokat a színészeket, akik nem magyar nemzetiségűek ÉS aktívak!
+SELECT * FROM szineszek
+WHERE nemzetiseg != 'magyar' AND aktiv = 'igen';
